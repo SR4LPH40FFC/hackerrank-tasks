@@ -1,0 +1,7 @@
+class CONST:
+    GLYCATION_THRESHOLD     = 150
+    INITIAL_BLOOD_SUGAR     = 0
+    AFTER_EAT_DURATION      = 2*60
+    DURATION_AFTER_EXERCISE = 1*60
+    NORMALIZE_RATE          = 1
+    INTERVAL                = 60

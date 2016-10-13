@@ -13,6 +13,7 @@ def find_shortest_path(graph, start, end, path=[]):
                 if newpath:
                     if not shortest or len(newpath) < len(shortest):
                         shortest = newpath
+
         return shortest
 
 
@@ -31,6 +32,18 @@ for t in xrange(T):
         nodes[x-1].extend([y-1])
 
     S = int(raw_input().strip())-1
+
+# 1
+# 5 5
+# 1 2
+# 1 3
+# 2 4
+# 3 5
+# 4 5
+# 1
+#     print nodes
+#     print find_shortest_path(nodes, S, 4)
+#     exit()
 
     for i in xrange(N):
         if S == i: continue
