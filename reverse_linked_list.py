@@ -5,17 +5,21 @@ class ListNode:
 
 def reverse(head):
 
-    current = head
-    previous = None
-    next = None
+    curr = head
+    prev = None
+    nxxt = None
 
-    while current != None:
-        next = current.next
-        current.next = previous
-        previous = current
-        current = next
+    while curr != None:
+#         nxxt = curr.next
+#         curr.next = prev
+#         prev = curr
+#         curr = nxxt
 
-    head = previous
+        prev = curr
+        next = curr.next
+        curr = next
+
+    head = prev
 
 def print_list(head):
     l = head
@@ -35,6 +39,9 @@ def main():
     print_list(q[0])
     reverse(q[0])
     print_list(q[4])
+
+
+main()
 
 """
 1 - 2 - 3 - 4 - 5
