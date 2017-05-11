@@ -1,3 +1,22 @@
+# print [x for x in xrange(1,3)]
+
+
+print [i for i in xrange(0,10) if i % 2 == 0]
+
+exit()
+
+
+
+
+
+
+
+
+
+
+
+
+
 # import json
 # 
 # jsonData = '{"qwe":"asd"}'
@@ -12,8 +31,59 @@
 
 # print (datetime.now() + timedelta(days=5)).strftime("%s")
 
-print max({1: 3, 2: 1, 13: 0})
 
+# print ((str(10)+" ") * 3).split()
+
+# X = map(int, "6 12 8 10 20 16".split())
+# F = map(int, "5 4 3 2 1 5".split())
+# 
+# a = map(int, "".join([(str(X[i])+" ") * F[i] for i,v in enumerate(X)]).split())
+# 
+# print a
+
+import boto3
+
+# Let's use Amazon S3
+s3 = boto3.resource('s3')
+
+
+## Print out bucket names
+# for bucket in s3.buckets.all():
+#     print(bucket.name)
+
+## Print bucket location
+# print (s3.get_bucket_location(Bucket = 'incoming.ziprecruiter.com'))
+
+
+bucket = s3.Bucket('incoming.ziprecruiter.com')
+
+# acl = bucket.Acl()
+# for grant in acl.grants:
+#     print(grant['Grantee']['DisplayName'], grant['Permission'])
+
+for key in bucket.objects.all():
+    print(key.key)
+
+# object = s3.Object('incoming.ziprecruiter.com','five9')
+# for key in object.get():
+#     print key
+
+exit()
+
+
+
+
+
+def this_fails():
+    x = 1/0
+
+try:
+    this_fails()
+except ZeroDivisionError as detail:
+    print 'Handling run-time error:', detail
+    exit()
+
+print 'qwe'
 
 exit()
 
