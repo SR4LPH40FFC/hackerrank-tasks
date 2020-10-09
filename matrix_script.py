@@ -32,4 +32,4 @@ for j in range(M):
   
 # # phrase = "q"+str(phrase)+"q"
 # print phrase
-print re.sub(r'\b[^a-zA-Z0-9]+\b', ' ', phrase)
+print re.sub(r'\b[^a-zA-Z0-9]+\b', r' ', phrase)
