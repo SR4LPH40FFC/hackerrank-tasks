@@ -17,12 +17,12 @@ Alphanumeric characters consist of: [A-Z, a-z, and 0-9].
 
 import re
   
-(N,M) = map(int, raw_input().strip().split())
+(N,M) = map(int, input().strip().split())
   
 matrix = []
   
 for i in range(N):
-    matrix.append(raw_input())
+    matrix.append(input())
   
 phrase = ""
   
@@ -32,4 +32,4 @@ for j in range(M):
   
 # # phrase = "q"+str(phrase)+"q"
 # print phrase
-print re.sub(r'\b[^a-zA-Z0-9]+\b', r' ', phrase)
+print(re.sub(r'\b[^a-zA-Z0-9]+\b', r' ', phrase))
